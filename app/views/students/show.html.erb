@@ -4,6 +4,13 @@
   <strong>Name:</strong>
   <%= @student.name %>
 </p>
+  <%= image_tag @user.avatar.url(:thumb) %>
+
+
+<h3>
+	<strong>Grade:</strong>
+	<%= @student.grade %>
+</h3>
 
 <p>
   <strong>Age:</strong>
