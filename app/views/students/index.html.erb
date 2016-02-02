@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Students</h1>
+<h1>Students</h1>
 
 <div class = 'row'>
 
@@ -10,18 +10,27 @@
 
       <div class="panel panel-primary">
 
+        <div class="panel-heading"><%= student.name %></div>
+
         <div class = 'panel-body'>
 
 
 
-        <%= student.name %>
+        
         <%= student.age %>
         <%= student.sex %>
-        <%= link_to 'Show', student, class: 'btn btn-default' %>
-        <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-default' %>
-        <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default' %>
-        
+
+        <br>
+        <br>
+
+        <div class="btn-group btn-group-xs" role="group" aria-label="...">
+          <%= link_to 'Show', student, class: 'btn btn-primary' %>
+          <%= link_to 'Edit', edit_student_path(student), class: 'btn btn-primary' %>
+          <%= link_to 'Delete', student, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
         </div>
+
+        </div>
+        
       </div>
     </div>
 
@@ -32,3 +41,4 @@
 <br>
 
 <%= link_to 'New Student', new_student_path %>
+
